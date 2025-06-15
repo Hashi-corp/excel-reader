@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+pandas
+matplotlib
+seaborn
+plotly
+gradio
+httpx
+python-multipart
+openai
