@@ -5,7 +5,7 @@ class FileUploadResponse(BaseModel):
     file_name: str
     message: str
 
-class UserPrompt(BaseModel):
+class UserPromptResponse(BaseModel):
     prompt: str
 
 class PlotResponse(BaseModel):
