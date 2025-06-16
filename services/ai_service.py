@@ -6,7 +6,7 @@ def infer_plot_types_from_prompt(prompt: str) -> str:
     Uses Gemini API to infer plot types from a user prompt.
     Returns a string describing the inferred plot types.
     """
-    api_key = os.getenv("GEMINI_API_KEY", "YOUR_GEMINI_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + api_key
     headers = {"Content-Type": "application/json"}
     data = {
