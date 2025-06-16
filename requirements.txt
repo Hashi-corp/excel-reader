@@ -6,6 +6,7 @@ matplotlib
 seaborn
 plotly
 gradio
+requests
 httpx
 python-multipart
 openai
