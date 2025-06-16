@@ -21,3 +21,15 @@ def save_and_parse_file(file: UploadFile):
     else:
         raise ValueError("Unsupported file type")
     return file_location, df
+
+def load_file_as_dataframe(filename: str):
+    file_location = os.path.join(UPLOAD_DIR, filename)
+    if not os.path.exists(file_location):
+        raise FileNotFoundError("File not found")
+    if filename.endswith('.csv'):
+        df = pd.read_csv(file_location)
+    elif filename.endswith(('.xls', '.xlsx')):
+        df = pd.read_excel(file_location)
+    else:
+        raise ValueError("Unsupported file type")
+    return df
