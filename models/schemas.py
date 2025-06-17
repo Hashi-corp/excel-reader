@@ -4,6 +4,7 @@ from typing import Optional
 class FileUploadResponse(BaseModel):
     file_name: str
     message: str
+    preview: str  # DataFrame head as string
 
 class UserPromptResponse(BaseModel):
     prompt: str
